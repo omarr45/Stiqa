@@ -137,7 +137,8 @@ input[type="checkbox"] {
 .grid {
     margin: 30px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 15px;
     align-items: stretch;
 }
@@ -241,9 +242,12 @@ input[type="checkbox"] {
 }
 
 @media (max-width: 768px) {
-    .grid {
+    /* .grid {
         grid-template-columns: 1fr 1fr;
         margin: 0;
+    } */
+    .cards {
+        width: 100%;
     }
     #clctn,
     #wlcm {
@@ -253,10 +257,10 @@ input[type="checkbox"] {
 }
 
 @media (max-width: 500px) {
-    .grid {
+    /* .grid {
         grid-template-columns: 1fr;
         margin: 0;
-    }
+    } */
     .grid>article {
         text-align: center;
     }
