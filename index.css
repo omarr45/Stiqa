@@ -137,8 +137,8 @@ input[type="checkbox"] {
 .grid {
     margin: 30px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
     align-items: stretch;
 }
 
@@ -242,7 +242,7 @@ input[type="checkbox"] {
 
 @media (max-width: 768px) {
     .grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr 1fr;
         margin: 0;
     }
     #clctn,
@@ -254,7 +254,7 @@ input[type="checkbox"] {
 
 @media (max-width: 500px) {
     .grid {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: 1fr;
         margin: 0;
     }
     .grid>article {
