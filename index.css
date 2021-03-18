@@ -13,12 +13,6 @@
     }
 }
 
-.palettes {
-    color: #18293b;
-    color: #0078E3;
-    color: #4ADEDE;
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -27,26 +21,20 @@
 }
 
 body {
-    background: white;
+    background: #eee;
     color: black;
 }
 
 nav {
     display: flex;
-    height: 120px;
+    height: 100px;
     width: 100%;
     background: white;
     align-items: center;
     justify-content: space-between;
     padding: 0 80px;
     flex-wrap: wrap;
-}
-
-nav .logo {
-    color: #fff;
-    font-size: 45px;
-    font-weight: 800;
-    font-family: 'Poppins';
+    /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); */
 }
 
 nav .logo:hover {
@@ -61,7 +49,7 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0px 10px;
+    margin: 0px 7px;
 }
 
 nav ul li a {
@@ -69,21 +57,30 @@ nav ul li a {
     text-decoration: none;
     font-size: 26px;
     font-weight: 300;
-    padding: 8px 10px;
+    padding: 8px 15px;
     border-radius: 5px;
     animation: fromUp 0.3s;
     font-family: 'Poppins';
+    border-radius: 2rem;
 }
 
 nav ul li a.active,
 nav ul li a:hover {
-    text-decoration: underline;
-    color: #E8306C;
-    /* background: black; */
+    /* text-decoration: underline; */
+    /* background: #e8306d57; */
+    background: rgba(0, 0, 0, 0.07);
 }
 
 nav ul li a.active {
+    color: black;
     font-weight: 700;
+    padding: 8px 20px;
+}
+
+nav ul li a.active::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f015 \00A0 \00A0";
 }
 
 nav .menu-btn i {
@@ -99,69 +96,87 @@ input[type="checkbox"] {
 
 .content {
     text-align: center;
-    width: 100%;
-    padding: 30px;
+    margin: 20px 40px;
+    padding: 20px;
+    background: white;
     color: black;
-    /* min-height: calc(100vh - 150px); */
 }
 
 #wlcm {
     font-size: 60px;
     font-weight: 700;
+    margin-bottom: 15px;
 }
 
-#clctn {
-    font-size: 60px;
+#headerStyle {
+    font-size: 70px;
     font-weight: 700;
     margin-bottom: -20px;
     margin-top: 10px;
-}
-
-.cards {
-    width: 80%;
-    margin: auto;
-}
-
-
-/* footer {
-    background: rgba(255, 255, 255, 0.1);
+    background: linear-gradient(10deg, #541D7A, #E8306C);
     color: white;
-    font-size: 18px;
-    letter-spacing: 1px;
-    text-align: center;
-    margin: auto;
-    margin-bottom: 10px;
+}
+
+.partition {
+    padding-bottom: 5px;
+    background: white;
+}
+
+.headBar {
     padding: 10px;
-} */
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+}
+
+.headBar .hdr {
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin-left: 20px;
+}
+
+.headBar .more {
+    right: 0;
+    width: 140px;
+    margin-right: 20px;
+    border: solid 1px black;
+    background: none;
+    font-size: 20px;
+    text-transform: inherit;
+    cursor: pointer;
+}
 
 .grid {
-    margin: 30px;
-    display: grid;
-    /* grid-template-columns: 1fr 1fr 1fr; */
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* display: grid;
+    grid-template-columns: repeat(auto-fit, 12rem);
     grid-gap: 15px;
-    align-items: stretch;
+    justify-content: center;
+    align-items: stretch; */
 }
 
-.grid>article {
+.card {
     border: 1px solid #ccc;
-    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
+    margin: 0 5px;
+    width: calc(90% / 4);
+    background: white;
+    /* border-radius: 1rem; */
     text-align: center;
+    overflow: hidden;
+    cursor: pointer;
 }
 
-.grid>article:hover {
+.card:hover {
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
     transition: transform .3s ease-in-out;
     transform: scale(1.05);
 }
 
-.grid>article img {
+.card img {
     width: 100%;
-    border-radius: 10px;
-}
-
-.text {
-    padding: 5px 20px;
 }
 
 .text>h3 {
@@ -170,18 +185,16 @@ input[type="checkbox"] {
     margin-bottom: 10px;
 }
 
-.text>button {
+.check {
     cursor: pointer;
     background: linear-gradient(10deg, #541D7A, #E8306C);
-    border-radius: 3px;
     border: 0;
+    border-radius: 0;
     color: white;
     padding: 10px;
-    margin-bottom: 10px;
     width: 100%;
     font-weight: 600;
     font-size: 20px;
-    text-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
     text-transform: uppercase;
 }
 
@@ -190,7 +203,7 @@ input[type="checkbox"] {
         padding: 0 40px 0 50px;
     }
     nav .logo {
-        font-size: 40px;
+        margin-top: 5px;
     }
     nav .menu-btn i {
         display: block;
@@ -201,7 +214,8 @@ input[type="checkbox"] {
     }
     nav ul {
         position: fixed;
-        top: 120px;
+        top: 100px;
+        padding-top: 50px;
         left: -100%;
         background: white;
         height: 100vh;
@@ -239,32 +253,34 @@ input[type="checkbox"] {
         transition: 0.3s;
         transition-timing-function: ease-in-out;
     }
+    .card {
+        width: calc(90% / 2);
+        margin: 5px;
+    }
 }
 
-@media (max-width: 768px) {
-    /* .grid {
-        grid-template-columns: 1fr 1fr;
-        margin: 0;
-    } */
-    .cards {
-        width: 100%;
+@media (max-width: 600px) {
+    .content {
+        margin: 20px;
     }
-    #clctn,
+    #headerStyle {
+        font-size: 48px;
+    }
     #wlcm {
-        margin-bottom: 0;
         font-size: 36px;
     }
-}
-
-@media (max-width: 500px) {
-    /* .grid {
-        grid-template-columns: 1fr;
-        margin: 0;
-    } */
-    .grid>article {
-        text-align: center;
+    .headBar {
+        display: block;
+        margin-bottom: -12px;
     }
-    .cards {
-        width: 100%;
+    .headBar .hdr {
+        font-size: 26px;
+        margin: auto;
+    }
+    .headBar .more {
+        margin: auto;
+    }
+    .card {
+        width: calc(90%);
     }
 }
