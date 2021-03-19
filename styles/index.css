@@ -198,6 +198,27 @@ input[type="checkbox"] {
     text-transform: uppercase;
 }
 
+footer {
+    background: white;
+    padding: 50px;
+    text-align: center;
+}
+
+footer hr {
+    height: 2px;
+    width: 150%;
+    transform: translateX(-10%);
+    border-width: 0;
+    background-color: rgba(0, 0, 0, 0.07)
+}
+
+.ic1 {
+    color: black;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f015 \00A0 \00A0";
+}
+
 @media (max-width: 1000px) {
     nav {
         padding: 0 40px 0 50px;
